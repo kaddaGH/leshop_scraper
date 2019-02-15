@@ -29,18 +29,13 @@ products.each_with_index  do |product,i|
       PRODUCT_ITEM_SIZE: data['size']['minimum'],
       PRODUCT_ITEM_SIZE_UOM: data['size']['unit'],
       PRODUCT_ITEM_QTY_IN_PACK: data['numberOfUnits'],
-      IS_AVAILABLE: "1",
-      EXTRACTED_ON: Time.now.to_s
+      IS_AVAILABLE: "1"
 
   }
 
-
-
   products_details << product_details
 
-
 end
-
 
 
 if products_ids.length>0
