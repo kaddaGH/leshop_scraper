@@ -1,6 +1,5 @@
 require 'cgi'
 require './lib/headers'
-
 pages << {
     page_type: 'products_search',
     method: 'GET',
@@ -20,6 +19,7 @@ search_terms.each do |search_term|
   pages << {
       page_type: 'products_search',
       method: 'GET',
+      headers: ReqHeaders::SEARCH_PAGE_HEADER_REQ,
       url: "https://www.leshop.ch/supermarket/public/v3/api/search/languages/de/warehouses/2/products?sortOrder=asc&query=#{CGI.escape(search_term)}",
       vars: {
           'input_type' => 'search',
