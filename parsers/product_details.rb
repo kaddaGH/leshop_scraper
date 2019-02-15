@@ -1,3 +1,4 @@
+require './lib/headers'
 products = JSON.parse(content)
 products_details=[]
 products_ids=[]
@@ -42,28 +43,12 @@ end
 
 
 
-headers = {
-
-    "referer" => "https://www.leshop.ch/de/supermarket/getranke-kaffee-alkohol/soft-drinks/energy-drinks",
-    "Host" => "www.leshop.ch",
-    "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:65.0) Gecko/20100101 Firefox/65.0",
-    "Accept" => "application/json, text/plain, */*",
-    "Accept-Language" => "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
-    "Accept-Encoding" => "gzip, deflate, br",
-    "Referer" => "https://www.leshop.ch/de/supermarket/getranke-kaffee-alkohol/soft-drinks/energy-drinks",
-    "leshopch" => "eyJsdmwiOiJVIiwiZW5jIjoiQTI1NkdDTSIsImFsZyI6ImRpciIsImtpZCI6IjlmNjcwNjMxLTg2NGYtNDJkMy04Yzc1LTA4M2RiOTJkYWY1MiJ9..22f9YEX53lwVU-Il.I0ToPOWsOdXsi-_YT7fMRvjdN1Gnh3Q6q_enKuvGDCx3lE90rICdqazP4YF8yAdcVOw1vpPLTk5eonZOMjgQ6pI1XxGL-7zjzFQRraDsoNhwIVWk6c-HFxy6gjMgktJsG6z6jg4TYaCuVacOZzKnP3LK7PsNUvhRlGFigTy7ZAvUy0LT82AcM-9zbRytcjx1uVlnaZZu8yUnCQsVIO-rapPrjP9wMm0oCfjSEJNeJ84CCBw13RypcS-IDnENaO7MRXO_6fjV5rC3nzVjokJ76IXRUqwg.t-gVEEZHm4nLwVUFcLptYw",
-    "DNT" => "1",
-    "Connection" => "keep-alive",
-
-
-}
-
 if products_ids.length>0
   pages << {
       page_type: 'products_prices',
       method: 'GET',
       url: "https://www.leshop.ch/catalog/public/v1/api/compatibility/prices/#{products_ids.join(',')}/warehouses/2?search_term=#{page['vars']['search_term']}&page=#{page['vars']['page']}",
-      headers:headers,
+      headers:ReqHeaders::SEARCH_PAGE_HEADER_REQ,
       vars: {
           'products_details' => products_details
 
