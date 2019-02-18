@@ -40,7 +40,7 @@ products_details.each do |product_details|
   pages << {
       page_type: 'product_texts',
       method: 'GET',
-      url: "https://www.leshop.ch/supermarket/public/v2/api/productmetadata/language/de/products?id=#{products_details["PRODUCT_ID"]}?search_term=#{page['vars']['search_term']}&page=#{page['vars']['page']}",
+      url: "https://www.leshop.ch/supermarket/public/v2/api/productmetadata/language/de/products?id=#{product_details["PRODUCT_ID"]}?search_term=#{page['vars']['search_term']}&page=#{page['vars']['page']}",
       headers:ReqHeaders::SEARCH_PAGE_HEADER_REQ,
       vars: {
           'product_details' => product_details
