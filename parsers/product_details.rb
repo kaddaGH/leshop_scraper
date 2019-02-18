@@ -22,7 +22,7 @@ products.each_with_index  do |product,i|
       PRODUCT_RANK: i + 1,
       PRODUCT_PAGE: page['vars']['page'],
       PRODUCT_ID: data["id"],
-      PRODUCT_NAME: data['name']['de'],
+      PRODUCT_NAME: data['name']['de']+" "+data['versioning']['de'],
       EAN: data['eans'].join(','),
       PRODUCT_DESCRIPTION: data['description']['de'],
       PRODUCT_MAIN_IMAGE_URL: "https://www-leshop-ch-cld-res.cloudinary.com/image/upload/w_500,h_500,d_default_LS_nrd2c5.jpg,c_pad,g_center,dpr_1,fl_lossy,b_rgb:fff/f_auto/e_unsharp_mask:100/q_auto/v20190214/prod/catalog/product/product-" + data['id'].to_s,
@@ -45,7 +45,10 @@ if products_ids.length>0
       url: "https://www.leshop.ch/catalog/public/v1/api/compatibility/prices/#{products_ids.join(',')}/warehouses/2?search_term=#{page['vars']['search_term']}&page=#{page['vars']['page']}",
       headers:ReqHeaders::SEARCH_PAGE_HEADER_REQ,
       vars: {
-          'products_details' => products_details
+          'products_details' => products_details,
+          'input_type' => page['vars']['input_type'],
+          'search_term' => page['vars']['search_term'],
+          'page' => page['vars']['page']
 
       }
   }

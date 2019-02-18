@@ -11,6 +11,9 @@ parsers:
   - page_type: products_prices
     file: ./parsers/products_prices.rb
     disabled: false
+  - page_type: product_texts
+      file: ./parsers/product_texts.rb
+      disabled: false
 exporters:
   - exporter_name: products_json
     exporter_type: json
