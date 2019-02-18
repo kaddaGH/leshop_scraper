@@ -1,7 +1,9 @@
 require './lib/headers'
-products = JSON.parse(content)
-k = 1+"dd"
-product_details = page['vars']['product_details']
+product = JSON.parse(content)
 
+description  = product[0]['foodFacts']['regulatedDescription'] rescue ''
+product_details = page['vars']['product_details']
+product_details['PRODUCT_DESCRIPTION']+= description
 product_details['_collection'] = 'products'
 product_details['EXTRACTED_ON'] = Time.now.to_s
+outputs << product_details
