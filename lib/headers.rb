@@ -8,7 +8,7 @@ module ReqHeaders
       "Accept-Language" => "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
       "Accept-Encoding" => "gzip, deflate, br",
       "Referer" => "https://www.leshop.ch/de/supermarket/getranke-kaffee-alkohol/soft-drinks/energy-drinks",
-      "leshopch" => "eyJsdmwiOiJVIiwiZW5jIjoiQTI1NkdDTSIsImFsZyI6ImRpciIsImtpZCI6IjlkNjZhZjc1LTI5M2MtNDM1Zi1iY2E2LWY3ZjE2MTdjNmQ2YSJ9..LbPsWERwqodgQpEY.LmZQFnKcwpGt4qEX0YTI3PgS71Q0gFjF9MtKPcR26zEsmBSsBcm_VPEHe6FOVYfetbjzms_TkF29AjLDUAePFMn1MF3Ic4cWePkNi1W83HfbRXjU7s1CU5Wzf6zJ5qb-0KuJoN5cd0t2h9JyF-8_AN2MwrKpJfLDmfkGc7_EKLdbDjQhinNhxJZe267pnFglmaKpxNRVZ16bKotqd8KWRgN2E5LSGPYXcBbVbVsB7WiBZIcx2XKmHcpgiqlkdBfA1rb8185xCYw7NSWDJpNU_TlMoqhx.5g7NaMZPERCBYkYXwlHrRw",
+      "leshopch" => "eyJsdmwiOiJVIiwiZW5jIjoiQTI1NkdDTSIsImFsZyI6ImRpciIsImtpZCI6IjlkNjZhZjc1LTI5M2MtNDM1Zi1iY2E2LWY3ZjE2MTdjNmQ2YSJ9..Lsg5mn0Wesnd7N0K.HGtPEUob_1SGMG5qcZyXerx49arca6iw_uuqPTMv9E2UP_tdw6chhX6SKh90Le9BlX9S18jXI2co5C6fYoR8lcpf8xvV_tVFYz8RfaPluvhhJ_gblOBio0PkDjaDfiIG3f9rV96p_i5DOykU7GFI06Q0lxxeMY3WuLNcMupFlT5-L-b7Zm4tsWaybiwDPzezBJ5Mc0UO7iF_Yrp-mzkrL7IhrhLTMm8ZcAzGtHdi6_n8VwTVfdWEMPDt6kTbXpGIsjkPIYIdnpfYipa9dbMx0oldNurG.OMhYgQj7qri-pychh6MLuw",
       "DNT" => "1",
       "Connection" => "keep-alive",
 
