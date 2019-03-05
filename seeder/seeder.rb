@@ -3,7 +3,7 @@ require './lib/headers'
 pages << {
     page_type: 'products_search',
     method: 'GET',
-    url: 'https://www.leshop.ch/supermarket/public/v3/api/products/languages/de/warehouses/2/categoryId/3857273?&sortOrder=asc',
+    url: 'https://www.leshop.ch/supermarket/public/v3/api/products/languages/de/warehouses/1/categoryId/3857273?&sortOrder=asc',
     headers: ReqHeaders::SEARCH_PAGE_HEADER_REQ,
     vars: {
         'input_type' => 'taxonomy',
@@ -20,7 +20,7 @@ search_terms.each do |search_term|
       page_type: 'products_search',
       method: 'GET',
       headers: ReqHeaders::SEARCH_PAGE_HEADER_REQ,
-      url: "https://www.leshop.ch/supermarket/public/v3/api/search/languages/de/warehouses/2/products?sortOrder=asc&query=#{CGI.escape(search_term)}",
+      url: "https://www.leshop.ch/supermarket/public/v3/api/search/languages/de/warehouses/1/products?sortOrder=asc&query=#{CGI.escape(search_term)}",
       vars: {
           'input_type' => 'search',
           'search_term' => search_term,

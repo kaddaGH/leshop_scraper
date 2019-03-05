@@ -43,7 +43,7 @@ if products_ids.length>0
   pages << {
       page_type: 'products_prices',
       method: 'GET',
-      url: "https://www.leshop.ch/catalog/public/v1/api/compatibility/prices/#{products_ids.join(',')}/warehouses/2?search_term=#{page['vars']['search_term']}&page=#{page['vars']['page']}",
+      url: "https://www.leshop.ch/catalog/public/v1/api/compatibility/prices/#{products_ids.join(',')}/warehouses/1?search_term=#{page['vars']['search_term']}&page=#{page['vars']['page']}",
       headers:ReqHeaders::SEARCH_PAGE_HEADER_REQ,
       vars: {
           'products_details' => products_details,
