@@ -31,7 +31,7 @@ products_details.each do |product_details|
     product_details['SALES_PRICE'] = prices[product_id]['sale_price']
     product_details['PROMOTION_TEXT'] = prices[product_id]['promotion_text']
      unless  prices[product_id]['pack'].nil?
-       if prices[product_id]['pack'].to_i>0
+       if prices[product_id]['pack'].to_i>1
 
         product_details['PRODUCT_ITEM_QTY_IN_PACK'] = prices[product_id]['pack']
      end
