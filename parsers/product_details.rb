@@ -6,6 +6,7 @@ products.each_with_index  do |product,i|
   data = product[1]
   products_ids<<data["id"]
   name = data['name']['de']+" "+data['versioning']['de'] rescue data['name']['de']
+  name = data['brand']+' '+name
   product_details = {
       # - - - - - - - - - - -
       RETAILER_ID: '105',
