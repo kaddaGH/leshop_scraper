@@ -30,10 +30,12 @@ products_details.each do |product_details|
   if prices.keys.include? product_id
     product_details['SALES_PRICE'] = prices[product_id]['sale_price']
     product_details['PROMOTION_TEXT'] = prices[product_id]['promotion_text']
-    unless  prices[product_id]['pack'].nil?
-      product_details['PRODUCT_ITEM_QTY_IN_PACK'] = prices[product_id]['pack']
+    if product_details['PRODUCT_ITEM_QTY_IN_PACK'].nil? or product_details['PRODUCT_ITEM_QTY_IN_PACK']==""
+      unless  prices[product_id]['pack'].nil?
+        product_details['PRODUCT_ITEM_QTY_IN_PACK'] = prices[product_id]['pack']
+      end
     end
-
+    
 
   end
 
