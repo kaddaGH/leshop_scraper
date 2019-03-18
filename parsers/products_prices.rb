@@ -44,7 +44,7 @@ products_details.each do |product_details|
     product_details['PRODUCT_NAME'] = product_details['PRODUCT_NAME'].gsub(/pack_size/,'')
     else
 
-      product_details['PRODUCT_NAME'] = product_details['PRODUCT_NAME'].gsub(/pack_size/,product_details['PRODUCT_ITEM_QTY_IN_PACK'])
+      product_details['PRODUCT_NAME'] = product_details['PRODUCT_NAME'].gsub(/pack_size/,product_details['PRODUCT_ITEM_QTY_IN_PACK'].to_s+'x')
   end
   pages << {
       page_type: 'product_texts',
