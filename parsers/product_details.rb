@@ -7,6 +7,7 @@ products.each_with_index  do |product,i|
   products_ids<<data["id"]
 
   name = data['description']['de']
+  description = data['benefits']['de'] rescue  ''
   product_details = {
       # - - - - - - - - - - -
       RETAILER_ID: '105',
@@ -26,7 +27,7 @@ products.each_with_index  do |product,i|
       PRODUCT_ID: data["id"],
       PRODUCT_NAME: name,
       EAN: data['eans'].join(','),
-      PRODUCT_DESCRIPTION: data['benefits']['de'],
+      PRODUCT_DESCRIPTION:description ,
       PRODUCT_MAIN_IMAGE_URL: "https://www-leshop-ch-cld-res.cloudinary.com/image/upload/w_500,h_500,d_default_LS_nrd2c5.jpg,c_pad,g_center,dpr_1,fl_lossy,b_rgb:fff/f_auto/e_unsharp_mask:100/q_auto/v20190214/prod/catalog/product/product-" + data['id'].to_s,
       PRODUCT_ITEM_SIZE: data['size']['minimum'],
       PRODUCT_ITEM_SIZE_UOM: data['size']['unit'],
