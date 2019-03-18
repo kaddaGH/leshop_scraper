@@ -40,6 +40,12 @@ products_details.each do |product_details|
 
   end
 
+  if product_details['PRODUCT_ITEM_QTY_IN_PACK'].to_i==1
+    product_details['PRODUCT_NAME'] = product_details['PRODUCT_NAME'].gsub(/pack_size/,'')
+    else
+
+      product_details['PRODUCT_NAME'] = product_details['PRODUCT_NAME'].gsub(/pack_size/,product_details['PRODUCT_ITEM_QTY_IN_PACK'])
+  end
   pages << {
       page_type: 'product_texts',
       method: 'GET',
