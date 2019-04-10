@@ -2,7 +2,7 @@ module ReqHeaders
   SEARCH_PAGE_HEADER_REQ = {
 
       "Host" => "www.leshop.ch",
-      "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:65.0) Gecko/20100101 Firefox/65.0",
+      "User-Agent" => "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36",
       "Accept" => "application/json, text/plain, */*",
       "Accept-Language" => "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
       "Accept-Encoding" => "gzip, deflate, br",
