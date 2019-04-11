@@ -34,10 +34,10 @@ end
 
 
 if products_ids.length > 0
-  products_ranking = []
+  products_ranking = {}
   rank = 1
   products_ids.each do |products_id|
-    products_ranking << {products_id=>rank}
+    products_ranking[products_id]=rank
     rank += 1
 
   end
