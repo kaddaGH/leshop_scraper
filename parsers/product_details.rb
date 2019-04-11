@@ -3,6 +3,7 @@ products = JSON.parse(content)
 products_details=[]
 products_ids=[]
 products_ranking = page['vars']['products_ranking']
+
 products.each_with_index  do |product,i|
   data = product[1]
   products_ids<<data["id"]
@@ -25,7 +26,7 @@ products.each_with_index  do |product,i|
       SCRAPE_URL_NBR_PROD_PG1: page['vars']['nbr_products_pg1'],
       # - - - - - - - - - - -
       PRODUCT_BRAND: data['brand'],
-      PRODUCT_RANK: products_ranking[data["id"]],
+      PRODUCT_RANK: products_ranking[data["id"].to_s],
       PRODUCT_PAGE: page['vars']['page'],
       PRODUCT_ID: data["id"],
       PRODUCT_NAME: name,
