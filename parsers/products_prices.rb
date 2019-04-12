@@ -14,9 +14,9 @@ products.each do |product|
   pack = product[1]['multiplier'] rescue nil
 
   unless promotion_price.nil?
-    product_price = promotion_price
     promotion_text = (100 - (promotion_price * 100 / product_price)).to_i
     promotion_text = promotion_text.to_s + "%"
+    product_price = promotion_price
   end
   prices[product_id.to_s] = {'sale_price' => product_price, 'promotion_text' => promotion_text,'pack'=>pack}
 end
