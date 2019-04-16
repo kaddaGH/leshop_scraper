@@ -8,7 +8,7 @@ products.each_with_index  do |product,i|
   data = product[1]
   products_ids<<data["id"]
   versioning = data['versioning']['de'] rescue  ''
-  name = data['brand']+' '+data['name']['de']+' '+versioning + ' pack_size'+data['size']['minimum'].to_i.to_s+data['size']['unit'].to_s
+  name = data['brand']+' '+data['brandLine']+' '+data['name']['de']+' '+versioning + ' pack_size'+data['size']['minimum'].to_i.to_s+data['size']['unit'].to_s
 
 
   description = data['benefits']['de'] rescue  ''
